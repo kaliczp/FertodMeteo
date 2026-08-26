@@ -1,0 +1,13 @@
+pdf(file = paste0("FertodControl.pdf"), width=21)
+plot(get(csatorna_nevek[1]), main = csatorna_nevek[1])
+plot(get(csatorna_nevek[2]), main = csatorna_nevek[2])
+plot(get(csatorna_nevek[3]), main = csatorna_nevek[3])
+plot(get(csatorna_nevek[4]), main = csatorna_nevek[4])
+plot(get(csatorna_nevek[5]), main = csatorna_nevek[5])
+plot(get(csatorna_nevek[6]), main = csatorna_nevek[6])
+plot(get(csatorna_nevek[7]), main = csatorna_nevek[7])
+plot(get(csatorna_nevek[8]), main = csatorna_nevek[8])
+plot(get(csatorna_nevek[9]), main = csatorna_nevek[9])
+plot(get(csatorna_nevek[10]), main = csatorna_nevek[10])
+dev.off()
+
