@@ -1,8 +1,15 @@
 ## Teszt beolvasás
-dir("Met_allomas_Fertodkontrol/202606/")
+dir("Met_allomas_Fertodkontrol/202607/")
 teszt <- read.csv("Met_allomas_Fertodkontrol/202606/25.CSV", head = FALSE)
 ## Felfedezés
 names(teszt)
 str(teszt)
 csatorna_lista <- split(teszt, teszt[[3]])
 str(csatorna_lista)
+csatorna_nevek <- paste0("C", names(csatorna_lista))
+library(xts)
+for(aktual_csatorna in 1:length(csatorna_nevek)){
+    assign(csatorna_nevek[aktual_csatorna], xts(csatorna_lista[[aktual_csatorna]][,4],
+                                                as.POSIXct(csatorna_lista[[aktual_csatorna]][,1])
+                                                ))
+}
