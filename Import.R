@@ -1,5 +1,6 @@
 ## Teszt beolvasás
-teszt <- read.csv("Met_allomas_Fertodkontrol/202606/25.CSV", head = FALSE)
+FertodDataLocation <- "Met_allomas_Fertodkontrol"
+teszt <- read.csv(paste(FertodDataLocation, "202606/25.CSV", sep = "/", head = FALSE)
 ## Felfedezés
 names(teszt)
 str(teszt)
