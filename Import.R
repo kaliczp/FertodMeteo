@@ -14,8 +14,10 @@ for(aktual_csatorna in 1:length(csatorna_nevek)){
                                                 ))
 }
 ## Collect all files
-allfilenames <- paste("202606", dir("Met_allomas_Fertodkontrol/202606/"), sep = "/")
-allfilenames <- c(allfilenames, paste("202607", dir("Met_allomas_Fertodkontrol/202607/"), sep = "/"))
+aktual_dirname <- paste(FertodDataLocation, "202606/", sep = "/")
+allfilenames <- paste("202606", dir(aktual_dirname), sep = "/")
+aktual_dirname <- paste(FertodDataLocation, "202607/", sep = "/")
+allfilenames <- c(allfilenames, paste("202607", dir(aktual_dirname), sep = "/"))
 allfilenames <- paste("Met_allomas_Fertodkontrol", allfilenames, sep = "/")
 
 ## Import and convert all
