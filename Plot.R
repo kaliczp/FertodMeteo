@@ -1,4 +1,4 @@
-pdf(file = paste0("FertodControl.pdf"), width=21)
+pdf(file = paste0("FertodControl.pdf"), width=28)
 plot(get(csatorna_nevek[1]), main = csatorna_nevek[1])
 plot(get(csatorna_nevek[2]), main = csatorna_nevek[2])
 plot(get(csatorna_nevek[3]), main = csatorna_nevek[3])
