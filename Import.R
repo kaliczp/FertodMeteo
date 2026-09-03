@@ -16,6 +16,7 @@ for(aktual_csatorna in 1:length(csatorna_nevek)){
 ## Collect all files
 aktual_dirname <- paste(FertodDataLocation, "202606/", sep = "/")
 allfilenames <- paste("202606", dir(aktual_dirname), sep = "/")
+allfilenames <- allfilenames[-1] # Az első állomány levágása a fenti teszt miatt!
 aktual_dirname <- paste(FertodDataLocation, "202607/", sep = "/")
 allfilenames <- c(allfilenames, paste("202607", dir(aktual_dirname), sep = "/"))
 aktual_dirname <- paste(FertodDataLocation, "202608/", sep = "/")
