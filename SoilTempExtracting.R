@@ -28,7 +28,11 @@ split_sensors <- function(sensor) {
     ## Problémás időpontok:
     ## nem 3 és nem 4 mérés tartozik hozzá
 
-    bad_times <- unique(tt[n != 3 & n != 4])
+    bad_times <- data.frame(
+        time = unique(tt[n != 3 & n != 4])
+    )
+
+    bad_times$n <- n[match(bad_times$time, tt)]
 
     ## A 4 mérésből álló csoportokban a 2. mérés
     ## a duplikált első csatorna -> ezt eldobjuk
@@ -58,3 +62,7 @@ split_sensors <- function(sensor) {
         bad_times = bad_times
     )
 }
+
+C14_sens <- split_sensors(C14)
+
+C14_sens$bad_times
